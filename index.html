@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>洛谷字典</title>
-  </head>
-  <body>
-    <div class="input">
-      <input class="prompt" type="text" placeholder="键入以搜索"><i class="search link icon"></i>
-    </div>
-  </body>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+	<meta charset="utf-8">	
+	<head>
+		<title>洛谷字典</title>
+		<script language="javascript">
+			function click_search_btn() {
+				localStorage.search_words = $('[name=Search]')[0].value;
+				show_alert("好像哪里有点问题", "暂无"+localStorage.search_words+"资料");
+				consloe.log("暂无"+localStorage.search_words+"资料");
+			}
+		</script>
+	</head>
+	<body>
+		<div class="input">
+			<form>
+				<input class="prompt" name="Search" type="text" placeholder="键入以搜索" autocomplete="off" />
+			</form>
+			<button class="am-btn am-btn-sm am-btn-primary" id="search-btn" onclick="click_search_btn()">搜索!</button>
+		</div>
+	</body>
 </html>
