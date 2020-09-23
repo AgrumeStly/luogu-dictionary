@@ -7,10 +7,23 @@
 	<meta charset="utf-8">	
 	<head>
 		<title>orz - 洛谷字典Luodic</title>
+		<script language="javascript">
+			function click_search_btn() {
+				var search_words = document.getElementById('search').value;
+				location.href = "//"+search_words;
+				alert("[洛谷字典]:正在搜索关于\""+search_words+"\"的资料...");
+			}
+		</script>
 	</head>
 	<body>
-		<h1>orz</h1>
-		<p>orz 一般指膜拜某人，orz 形似一个跪拜的小人</p>
-		<p>变体：srO，Orz，Otz</p>
+		<div class="input">
+			<input class="prompt" id="search" name="Search" type="text" placeholder="键入以搜索" autocomplete="off" />
+			<button class="am-btn am-btn-sm am-btn-primary" id="search-btn" onclick="click_search_btn()">search!</button>
+		</div>
+		<div class="words-introduce">
+			<h1>orz</h1>
+			<p>orz 一般指膜拜某人，orz 形似一个跪拜的小人</p>
+			<p>变体：srO，Orz，Otz</p>
+		</div>
 	</body>
 </html>
