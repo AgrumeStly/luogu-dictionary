@@ -6,11 +6,17 @@
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
 	<meta charset="utf-8">	
 	<head>
-		<title>洛谷字典</title>
+		<title>洛谷字典 luogu-dictionaries</title>
 		<script language="javascript">
 			function click_search_btn() {
 				var search_words = document.getElementById('search').value;
-				alert("[洛谷字典]:暂无\""+search_words+"\"资料");
+				if (search_words == "测试" || search_words == "test") {
+					location.href = "/"+search_words;
+					alert("[洛谷字典]:已经搜索到关于\""+search_words+"\"的资料");
+				}
+				else {
+					alert("[洛谷字典]:暂无\""+search_words+"\"资料");
+				}
 			}
 		</script>
 	</head>
