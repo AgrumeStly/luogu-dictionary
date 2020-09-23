@@ -10,13 +10,8 @@
 		<script language="javascript">
 			function click_search_btn() {
 				var search_words = document.getElementById('search').value;
-				if (search_words == "测试" || search_words == "test" || search_words == "orz") {
-					location.href = "/"+search_words;
-					alert("[洛谷字典]:已经搜索到关于\""+search_words+"\"的资料");
-				}
-				else {
-					alert("[洛谷字典]:暂无\""+search_words+"\"资料");
-				}
+				location.href = "/"+search_words;
+				alert("[洛谷字典]:正在搜索关于\""+search_words+"\"的资料...");
 			}
 		</script>
 	</head>
