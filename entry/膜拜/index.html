@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+	<meta charset="utf-8">	
+	<head>
+		<title>膜拜 - 洛谷字典Luodic</title>
+		<script language="javascript">
+			function click_search_btn() {
+				var search_words = document.getElementById('search').value;
+				location.href = "/"+search_words;
+				alert("[洛谷字典]:正在搜索关于\""+search_words+"\"的资料...");
+			}
+		</script>
+	</head>
+	<body>
+		<div class="input">
+			<input class="prompt" id="search" name="Search" type="text" placeholder="键入以搜索" autocomplete="off" />
+			<button class="am-btn am-btn-sm am-btn-primary" id="search-btn" onclick="click_search_btn()">search!</button>
+		</div>
+		<div class="words-introduce">
+			<h1>膜拜</h1>
+			<p>变体：<code>膜</code>、<code>%</code>、<code>stO</code>、<code>Orz</code>、<code>tql</code></p>
+			<p>如果一个人很强，你非常崇拜他/她，你就可以<code>膜拜</code>他/她（其中 stO Orz 是象形文字）</p>
+		</div>
+	</body>
+</html>
